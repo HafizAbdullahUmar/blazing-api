@@ -53,3 +53,4 @@ app.listen(port, () => {
 (async () => {
   await dbCreateConnection();
 })();
+export default app
