@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { User } from 'orm/entities/users/User';
-import { CustomError } from 'utils/response/custom-error/CustomError';
+import { User } from '../../orm/entities/users/User';
+import { CustomError } from '../../utils/response/custom-error/CustomError';
 
 export const changePassword = async (req: Request, res: Response, next: NextFunction) => {
   const { password, passwordNew } = req.body;

@@ -17,7 +17,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["./src/**/*.tsx", "./src/**/*.ts"],
+  "include": ["./src/**/*.tsx", "./src/**/*.ts", "src/index.js", "src/controllers/auth/index.ts", "src/utils/response/customSuccess.js", "src/routes/v1/auth.ts", "src/controllers/auth/changePassword.js"],
   // "include": ["./src/**/*.tsx", "./src/**/*.ts", "src/dfx/declarations/entry/index.js"],
 
   "exclude": ["node_modules", "test/**/*.ts"]

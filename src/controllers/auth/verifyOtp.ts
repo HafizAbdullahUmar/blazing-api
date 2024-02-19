@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from "express";
 import jwt from 'jsonwebtoken';
 
-import { User } from "orm/entities/users/User";
-import { CustomError } from "utils/response/custom-error/CustomError";
-import { JwtPayload } from "types/JwtPayload";
-import { Role } from "orm/entities/users/types";
-import { createJwtToken } from "utils/createJwtToken";
+import { User } from "../../orm/entities/users/User";
+import { CustomError } from "../../utils/response/custom-error/CustomError";
+import { JwtPayload } from "../../types/JwtPayload";
+import { Role } from "../../orm/entities/users/types";
+import { createJwtToken } from "../../utils/createJwtToken";
 
 export const verifyOTP = async (
     req: Request,

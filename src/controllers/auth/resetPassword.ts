@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
-import { User } from 'orm/entities/users/User';
-import { CustomError } from 'utils/response/custom-error/CustomError';
+import { User } from '../../orm/entities/users/User';
+import { CustomError } from '../../utils/response/custom-error/CustomError';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 

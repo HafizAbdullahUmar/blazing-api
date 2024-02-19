@@ -8,13 +8,12 @@ import cors from "cors";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
-import mysql from "mysql";
 
-import "./utils/response/customSuccess";
-import { errorHandler } from "./middleware/errorHandler";
-import { getLanguage } from "./middleware/getLanguage";
-import { dbCreateConnection } from "./orm/dbCreateConnection.js";
-import routes from "./routes";
+import "./utils/response/customSuccess.ts";
+import { errorHandler } from "./middleware/errorHandler.ts";
+import { getLanguage } from "./middleware/getLanguage.ts";
+import { dbCreateConnection } from "./orm/dbCreateConnection.ts";
+import routes from "./routes/index.ts";
 
 export const app = express();
 app.use(cors());

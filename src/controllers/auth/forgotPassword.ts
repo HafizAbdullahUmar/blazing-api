@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import { User } from 'orm/entities/users/User';
-import { CustomError } from 'utils/response/custom-error/CustomError';
-import { sendPasswordResetEmail } from 'utils/sendVerificationEmail';
+import { User } from '../../orm/entities/users/User';
+import { CustomError } from '../../utils/response/custom-error/CustomError';
+import { sendPasswordResetEmail } from '../../utils/sendVerificationEmail';
 
 export const forgotPassword = async (req: Request, res: Response, next: NextFunction) => {
     const { email } = req.body;

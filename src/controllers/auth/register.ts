@@ -2,9 +2,9 @@ import { Request, Response, NextFunction } from "express";
 import mongoose from 'mongoose';
 import crypto from 'crypto';
 
-import { User } from "orm/entities/users/User";
-import { CustomError } from "utils/response/custom-error/CustomError";
-import { sendVerificationEmail } from "utils/sendVerificationEmail";
+import { User } from "../../orm/entities/users/User";
+import { CustomError } from "../../utils/response/custom-error/CustomError";
+import { sendVerificationEmail } from "../../utils/sendVerificationEmail";
 
 export const register = async (
   req: Request,
