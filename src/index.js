@@ -9,11 +9,11 @@ import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 
-import "./utils/response/customSuccess.ts";
-import { errorHandler } from "./middleware/errorHandler.ts";
-import { getLanguage } from "./middleware/getLanguage.ts";
+import "./utils/response/customSuccess.js";
+import { errorHandler } from "./middleware/errorHandler.js";
+import { getLanguage } from "./middleware/getLanguage.js";
 import dbCreateConnection  from "./orm/dbCreateConnection.js";
-import routes from "./routes/index.ts";
+import routes from "./routes/index.js";
 
 export const app = express();
 app.use(cors());
