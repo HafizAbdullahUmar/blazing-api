@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 
 
-export const dbCreateConnection = async () => {
+ const dbCreateConnection = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
     console.log('Database connection success.');
@@ -12,3 +12,4 @@ export const dbCreateConnection = async () => {
   }
   return null;
 };
+module.exports = dbCreateConnection
