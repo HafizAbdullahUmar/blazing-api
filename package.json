@@ -1,11 +1,14 @@
 {
-  "name": "express-typescript-typeorm-boilerplate",
+  "name": "blazing-api",
   "version": "1.0.0",
   "description": "RESTful API boilerplate with Typescript, TypeORM, ExpressJs & Mocha.",
   "scripts": {
     "dev": "debug=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
     "dev:server": "cross-env DEBUG=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
     "build": "rimraf dist && tsc",
+    "build:vercel": "vercel build",
+    "login": "vercel login",
+    "vercel:dev": "vercel dev --debug",
     "start": "NODE_PATH=./dist node ./dist/index.js",
     "prepare": "husky install",
     "lint": "eslint --max-warnings 0 . && npm run tsc",
@@ -30,6 +33,7 @@
   },
   "dependencies": {
     "@helia/json": "^1.0.0",
+    "@vercel/node": "^3.0.19",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "cross-env": "^7.0.3",
@@ -47,7 +51,8 @@
     "reflect-metadata": "^0.1.13",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
-    "validator": "^13.7.0"
+    "validator": "^13.7.0",
+    "vercel": "^33.5.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.4",

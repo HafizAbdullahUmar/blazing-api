@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
 import mongoose from 'mongoose';
 
-import { Role } from 'orm/entities/users/types';
-import { User } from 'orm/entities/users/User';
-import { JwtPayload } from 'types/JwtPayload';
-import { createJwtToken } from 'utils/createJwtToken';
-import { CustomError } from 'utils/response/custom-error/CustomError';
+import { Role } from '../../orm/entities/users/types';
+import { User } from '../../orm/entities/users/User';
+import { JwtPayload } from '../../types/JwtPayload';
+import { createJwtToken } from '../../utils/createJwtToken';
+import { CustomError } from '../../utils/response/custom-error/CustomError';
 
 export const login = async (req: Request, res: Response, next: NextFunction) => {
   let { email, password } = req.body;

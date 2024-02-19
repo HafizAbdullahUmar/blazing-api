@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import validator from 'validator';
-import { CustomError } from 'utils/response/custom-error/CustomError';
-import { ErrorValidation } from 'utils/response/custom-error/types';
+import { CustomError } from '../../../utils/response/custom-error/CustomError';
+import { ErrorValidation } from '../../../utils/response/custom-error/types';
 
 export const validatorForgotPassword = (req: Request, res: Response, next: NextFunction) => {
     let { email } = req.body;
