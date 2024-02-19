@@ -13,7 +13,7 @@ import mysql from "mysql";
 import "./utils/response/customSuccess";
 import { errorHandler } from "./middleware/errorHandler";
 import { getLanguage } from "./middleware/getLanguage";
-import { dbCreateConnection } from "./orm/dbCreateConnection";
+import { dbCreateConnection } from "./orm/dbCreateConnection.js";
 import routes from "./routes";
 
 export const app = express();
