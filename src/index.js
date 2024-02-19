@@ -22,22 +22,22 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(getLanguage);
 
-try {
-  const accessLogStream = fs.createWriteStream(
-    path.join(__dirname, "../log/access.log"),
-    {
-      flags: "a",
-    }
-  );
-  app.use(morgan("combined", { stream: accessLogStream }));
-} catch (err) {
-  console.log(err);
-}
+// try {
+//   const accessLogStream = fs.createWriteStream(
+//     path.join(__dirname, "../log/access.log"),
+//     {
+//       flags: "a",
+//     }
+//   );
+//   app.use(morgan("combined", { stream: accessLogStream }));
+// } catch (err) {
+//   console.log(err);
+// }
 
 
 
 
-app.use(morgan("combined"));
+// app.use(morgan("combined"));
 
 
 app.use("/", routes);
