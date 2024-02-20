@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "debug=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
     "dev:server": "cross-env DEBUG=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
+    "rimraf": "./node_modules/rimraf/bin.js",
     "build": "rimraf dist && tsc",
     "start": "NODE_PATH=./dist node ./dist/index.js",
     "start:s": "cross-env NODE_PATH=./dist node ./dist/index.js",
