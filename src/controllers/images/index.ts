@@ -1,2 +1,2 @@
-export * from './getimage'
-export * from './storeimage'
+// export * from './getimage'
+// export * from './storeimage'

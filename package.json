@@ -7,6 +7,7 @@
     "dev:server": "cross-env DEBUG=* NODE_PATH=./src ts-node-dev --respawn ./src/index.ts",
     "build": "rimraf dist && tsc",
     "start": "NODE_PATH=./dist node ./dist/index.js",
+    "start:s": "cross-env NODE_PATH=./dist node ./dist/index.js",
     "lint": "eslint --max-warnings 0 . && npm run tsc",
     "lint-fix": "eslint --fix .",
     "lint-staged-husky": "lint-staged",
