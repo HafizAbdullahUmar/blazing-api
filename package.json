@@ -9,7 +9,7 @@
     "build": "tsc -p tsconfig.json",
     "vercel:start": "vercel dev",
     "vercel:build": "vercel build",
-    "start": "node ./dist/index.js",
+    "start": "NODE_PATH=./dist node ./dist/index.js",
     "start:s": "cross-env NODE_PATH=./dist node ./dist/index.js",
     "lint": "eslint --max-warnings 0 . && npm run tsc",
     "lint-fix": "eslint --fix .",
