@@ -17,15 +17,14 @@ export const register = async (
     let user = await User.findOne({ email });
    
     if (user) {
-      if (user.isVerified) {
         const customError = new CustomError(
           400,
           "General",
-          "User already exists",
-          [`Email '${user.email}' already exists`]
+          "Account already exists",
+          [`Account '${user.email}' already exists`]
         );
         return next(customError);
-      } 
+      
     } else {
       user = new User();
       user.email = email;
