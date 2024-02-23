@@ -22,7 +22,10 @@ export const login = async (req: Request, res: Response, next: NextFunction) => 
       const customError = new CustomError(404, 'General', 'Not Found', ['Incorrect email or password']);
       return next(customError);
     }
-
+    if(user.isVerified) {
+      const customError = new CustomError(401, 'Unauthorized', 'Account Not Verified', ['Please verify your account first']);
+      return next(customError);
+    }
     const jwtPayload: JwtPayload = {
       id: user._id,
       name: user.name,

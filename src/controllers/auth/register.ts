@@ -25,7 +25,7 @@ export const register = async (
           [`Email '${user.email}' already exists`]
         );
         return next(customError);
-      }
+      } 
     } else {
       user = new User();
       user.email = email;
